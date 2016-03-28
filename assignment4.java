@@ -3,16 +3,13 @@ import java.io.IOException;
 
 public class assignment4{
 
-   // main method. DO NOT MODIFY
  public static void main(String args[]) {
   Scanner keyboard = new Scanner( System.in );
     
   System.out.println("Welcome to Memory Game");
   
   int board_side;
-  
-  //this loop obtains the board size, or more specifically 
-  // the length of the side of the board
+
   do{
    System.out.println("\n For 2x2 board game press 2"+
     "\n For 4x4 board game press 4"+
@@ -22,9 +19,8 @@ public class assignment4{
   
   char[][] board = createBoard(board_side);
 
-  // a call the the shuffle method
   shuffleBoard(board);
-  // a call to the game playing method
+
   playGame(board); 
     
  }
@@ -32,7 +28,7 @@ public class assignment4{
  
   
   
- // The following method should shuffle the input 2D array caled board 
+ // The following method should shuffle the input 2D array called board 
  public static void shuffleBoard(char[][] board)
  {
   // This creates a 1D array whose size is equal to the size of the board   
@@ -51,7 +47,6 @@ for (int a = 0; a < board.length; a++)
   }
 }
 
-  // Shuffle 1D array here 
  
 for (int i = 0; i < board1D.length; i++)
     {
@@ -86,12 +81,11 @@ char arr[][] = new char[board.length][board.length];
  }
  }
 
- // a game playing method
  public static void playGame(char[][] board)
  {
   Scanner keyboard = new Scanner( System.in );
     
-  // this createst a 2D array indicating what locations are paired, i.e., discovered
+  // this creates a 2D array indicating what locations are paired, i.e., discovered
   // at the begining none are, so default initializaiton to false is ok 
   boolean[][]discovered=new boolean[board.length][board[0].length]; 
    char star[][] = new char[board.length][board.length];
